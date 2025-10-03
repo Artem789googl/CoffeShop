@@ -30,7 +30,7 @@ RecyclerView.Adapter<CategoryAdapter.Viewholder>(){
     override fun onBindViewHolder(holder: CategoryAdapter.Viewholder, position: Int) {
         val item = items[position]
         holder.binding.titleCard.text = item.title
-
+        updateAppearance(holder, position, context)
         holder.binding.root.setOnClickListener {
             lastSelectedPosition = selectedPosition
             selectedPosition = position
@@ -40,13 +40,21 @@ RecyclerView.Adapter<CategoryAdapter.Viewholder>(){
             Handler(Looper.getMainLooper()).postDelayed({
 
             }, 500)
-            if (selectedPosition == position) {
-                holder.binding.titleCard.setBackgroundColor(R.drawable.brown_full_corner)
-                holder.binding.titleCard.setTextColor(context.resources.getColor(R.color.white))
-            } else {
-                holder.binding.titleCard.setBackgroundColor(R.drawable.white_full_corner)
-                holder.binding.titleCard.setTextColor(context.resources.getColor(R.color.darkBrown))
-            }
+
+        }
+
+
+    }
+
+    private fun updateAppearance(holder: Viewholder, position: Int, context: Context) {
+        if (selectedPosition == position) {
+            // Выбранный элемент
+            holder.binding.titleCard.setBackgroundResource(R.drawable.brown_full_corner)
+            holder.binding.titleCard.setTextColor(context.resources.getColor(R.color.white))
+        } else {
+            // Невыбранный элемент
+            holder.binding.titleCard.setBackgroundResource(R.drawable.white_full_corner)
+            holder.binding.titleCard.setTextColor(context.resources.getColor(R.color.darkBrown))
         }
     }
 
