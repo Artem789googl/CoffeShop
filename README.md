@@ -1,5 +1,6 @@
 # Coffe shop app
 Project was created by video from youtube: https://www.youtube.com/watch?v=Pnw_9tZ2z4w&t=8661s
+Also, I took icon for this project from: https://icons8.com/icon/wWs0Mvy8dMp2/ko-fi
 
 ## My skills
 On this momnet, I have finished this progect.
