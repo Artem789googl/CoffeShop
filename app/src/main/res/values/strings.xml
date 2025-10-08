@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BuildCoffee</string>
+    <string name="app_name">Coffee shop</string>
     <string name="choice_your_nfavorite_coffee">Choice your\nFavorite Coffee</string>
     <string name="get_started">Get Started</string>
     <string name="search_anything">Search anything...</string>
@@ -9,4 +9,6 @@
     <string name="wishlist">Wishlist</string>
     <string name="my_order">My order</string>
     <string name="profile">Profile</string>
+    <string name="enter_your_discount_code">Enter Your Discount Code</string>
+    <string name="apply">Apply</string>
 </resources>
