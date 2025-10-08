@@ -1,5 +1,6 @@
 package com.aleriateam.buildcoffee.Adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -31,7 +32,7 @@ class CartAdapter(
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: CartAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CartAdapter.ViewHolder, @SuppressLint("RecyclerView") position: Int) {
         val item = listItemSelected[position]
 
         holder.binding.titleText.text = item.title

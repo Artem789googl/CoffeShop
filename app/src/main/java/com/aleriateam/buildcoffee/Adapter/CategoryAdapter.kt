@@ -1,5 +1,6 @@
 package com.aleriateam.buildcoffee.Adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Handler
@@ -30,7 +31,7 @@ RecyclerView.Adapter<CategoryAdapter.Viewholder>(){
         return Viewholder(binding)
     }
 
-    override fun onBindViewHolder(holder: CategoryAdapter.Viewholder, position: Int) {
+    override fun onBindViewHolder(holder: CategoryAdapter.Viewholder, @SuppressLint("RecyclerView") position: Int) {
         val item = items[position]
         holder.binding.titleCard.text = item.title
         updateAppearance(holder, position, context)
